@@ -6,7 +6,7 @@ import (
 	"unicode"
 )
 
-func CeasarCypherEncript(text string, shift int) string {
+func CeasarEncrypt(text string, shift int) string {
 	var result = ""
 
 	for _, char := range text {
@@ -23,7 +23,7 @@ func CeasarCypherEncript(text string, shift int) string {
 	return result
 }
 
-func CeasarDecypherEncript(text string, shift int) string {
+func CeasarDecrypt(text string, shift int) string {
 	var result = ""
 
 	for _, char := range text {
@@ -40,7 +40,7 @@ func CeasarDecypherEncript(text string, shift int) string {
 	return result
 }
 
-func VictorEncryptCaesar(text string, shift int) {
+func EncryptCaesarWithAlphabet(text string, shift int) {
 	alphabet := [26]string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
 	shift = shift % 26
 
@@ -72,7 +72,7 @@ func VictorEncryptCaesar(text string, shift int) {
 	fmt.Println("Mensagem Cifrada:", result.String())
 }
 
-func VictorDecryptCaesar(text string, shift int) {
+func DecryptCaesarWithAlphabet(text string, shift int) {
 	alphabet := [26]string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
 	shift = shift * (-1)
 	shift = shift % -26
